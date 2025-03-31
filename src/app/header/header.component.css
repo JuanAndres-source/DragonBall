@@ -8,9 +8,25 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.4rem;
+  color: white;
+  gap: 0.5rem;
   margin-right: 3rem;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-text {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
 }
 
 .nav-links {
@@ -31,17 +47,4 @@
 
 .nav-links a:hover {
   border-bottom: 2px solid #ffffff;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.4rem;
-  color: white;
-  gap: 0.5rem;
-}
-
-.logo-icon {
-  width: 24px;
-  height: 24px;
 }
