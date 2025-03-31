@@ -5,17 +5,22 @@
   background-color: #20232a;
   color: white;
   padding: 1rem 2rem;
+  position: relative;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  z-index: 2;
 }
 
 .nav-links {
-  list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
