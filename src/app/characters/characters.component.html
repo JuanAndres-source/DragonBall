@@ -1,1 +1,29 @@
-<p>Characters!</p>
+<section class="title-section">
+    <p class="title">Characters:</p>
+</section>
+
+<section class="characters-list">  
+<article class="character-card" *ngFor="let character of characters" (click)="openModal(character)">
+    <p class="name">{{character.name}}</p>
+    <img class="image" [src]="character.image" alt="{{character.name}}">
+</article>
+</section>
+<section class="pagination">
+    <button (click)="previousPage()">Previous</button>
+    <span>{{currentPage}} / {{totalPages}}</span>
+    <button (click)="nextPage()">Next</button>
+</section>
+
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        
+        <h2>{{selectedCharacter?.name}}</h2>
+        <img [src]="selectedCharacter?.image" alt="{{selectedCharacter?.name}}">
+        <p *ngIf="selectedCharacter?.description">{{selectedCharacter.description}}</p>
+        <p *ngIf="selectedCharacter?.ki">KI: "{{selectedCharacter.ki}}"</p>
+        <p *ngIf="selectedCharacter?.race">Race: "{{selectedCharacter.race}}"</p>
+        <p  *ngFor="let transformation of transformations"><img src="{{transformation.image}}" alt=""></p> 
+    <button (click)="closeModal()">Close</button>
+</div>
+</div>
