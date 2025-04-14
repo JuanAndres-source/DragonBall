@@ -7,7 +7,7 @@ import { CharacterService } from '../../services/character.service'; // ✅ RUTA
   standalone: true,
   templateUrl: './character-detail.component.html',
   styleUrls: ['./character-detail.component.css'],
-  imports: [] // aquí puedes añadir CommonModule si usas *ngIf, etc.
+  imports: [] 
 })
 export class CharacterDetailComponent implements OnInit {
   character: any;

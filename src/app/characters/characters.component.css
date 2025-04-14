@@ -7,7 +7,6 @@
     padding: 20px; 
     border-radius: 10px; 
 }
-
 .title{
     font-size: 20px;
     color: #333;
@@ -39,7 +38,6 @@
     margin: 0 auto; /* Centrar la lista de personajes */
     max-width: 1200px; /* Ancho máximo de la lista */
 }
-
 .character-card{
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 display: flex;
@@ -59,10 +57,9 @@ display: flex;
 .name{
     color: black;
     font-size: 24px;
-    margin-bottom: 10px; /* Espacio entre el nombre y la imagen */
+    margin-bottom: 10px;
     font-weight: bold;
 }
-
 .character-card img{
     width: 90%;
     height: 240px;
@@ -80,15 +77,13 @@ display: flex;
     cursor: pointer;
     
 }
-
-
 .modal {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.6); /* fondo oscuro */
+    background-color: rgba(0,0,0,0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +91,6 @@ display: flex;
     display: flex;
     flex-direction: column;
 }
-
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -109,9 +103,9 @@ display: flex;
     text-align: center;
     position: relative;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     overflow-y: auto;
 }
-
 
 .modal-content img {
     width: 100%;
@@ -120,7 +114,6 @@ display: flex;
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
 .close {
     position: absolute;
     top: 10px;
@@ -129,7 +122,6 @@ display: flex;
     cursor: pointer;
     color: #333;
 }
-
 .pagination{
     display: flex;
     justify-content: center;
@@ -146,7 +138,6 @@ display: flex;
     cursor: pointer; 
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .pagination>span{
     margin: 0 5px; 
     padding: 10px 15px; 

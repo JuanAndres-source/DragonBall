@@ -1,4 +1,5 @@
-<div *ngIf="character" class="character-card">
+@if (character) {
+  <div class="character-card">
     <h2>{{ character.name }}</h2>
     <img [src]="character.image" [alt]="character.name" />
     <p><strong>Raza:</strong> {{ character.race }}</p>
@@ -8,4 +9,4 @@
     <p><strong>MaxKi:</strong> {{ character.maxKi }}</p>
     <p><strong>Descripción:</strong> {{ character.description }}</p>
   </div>
-  
+}
