@@ -1,162 +1,179 @@
-/* planets.component.css */
+/* === Page Background === */
+.planets-background {
+  min-height: 100vh;
+  padding: 2rem;
+  background-image: url('/planets.jpeg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* === Title Section === */
 .title-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .title {
-    font-size: 20px;
-    color: #333;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Arial', sans-serif;
-    font-style: italic;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .planets-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  
-  .planet-card {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 200px;
-    flex-basis: 200px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    height: 340px;
-    text-align: center;
-    background-color: whitesmoke;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  
-  .name {
-    color: black;
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .planet-card img {
-    width: 90%;
-    height: 240px;
-    transition: transform 0.3s ease;
-    object-fit: contain;
-    padding: 12px;
-  }
-  
-  .planet-card img:hover {
-    transform: scale(1.02);
-  }
-  
-  .planet-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    flex-direction: column;
-  }
-  
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    width: 100%;
-    height: 90%;
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    overflow-y: auto;
-  }
-  
-  .modal-content img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: contain;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .pagination > button {
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #f6fafd;
-    color: rgb(3, 3, 3);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .pagination > span {
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* === Planets Grid === */
+.planets-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* === Planet Card === */
+.planet-card {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 340px;
+  text-align: center;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.name {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.planet-card img {
+  width: 90%;
+  height: 240px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+  padding: 12px;
+}
+
+.planet-card img:hover {
+  transform: scale(1.02);
+}
+
+.planet-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* === Modal === */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  flex-direction: column;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 100%;
+  height: 90%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* === Pagination === */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination > button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #f6fafd;
+  color: rgb(3, 3, 3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination > span {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}

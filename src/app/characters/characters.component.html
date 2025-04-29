@@ -1,4 +1,6 @@
-<section class="title-section">
+<div class="characters-background">
+
+  <section class="title-section">
     <p class="title">Characters:</p>
   </section>
   
@@ -14,7 +16,6 @@
   <section class="pagination">
     <button (click)="previousPage()">Previous</button>
     <span>{{ currentPage }} / {{ totalPages }}</span>
-    <span>{{ currentPage }}/{{ totalPages }}</span>
     <button (click)="nextPage()">Next</button>
   </section>
   
@@ -47,4 +48,5 @@
       </div>
     </div>
   }
-  
+
+</div>

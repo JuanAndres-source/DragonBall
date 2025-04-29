@@ -1,15 +1,66 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
+.home-background {
+  position: relative;
+  height: 100vh;
+  background-image: url('/dragonball-universe.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
 
-  h1 {
-    color: yellow;
-    font-size: 5rem; /* encore plus grand si tu veux */
-    margin-left: 40; /* évite un petit décalage vertical */
+/* Dark overlay for better contrast */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Centered content */
+.home-content {
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.glow-text {
+  font-size: 4.5rem;
+  color: #f9d71c;
+  text-shadow: 0 0 10px #f9d71c, 0 0 20px #ff9900, 0 0 30px #ff3300;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: #eee;
+  margin-top: 1rem;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* Text glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f9d71c, 0 0 20px #ff9900, 0 0 30px #ff3300;
   }
+  to {
+    text-shadow: 0 0 20px #fff200, 0 0 30px #ffcc00, 0 0 40px #ff6600;
+  }
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

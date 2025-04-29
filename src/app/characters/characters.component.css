@@ -1,4 +1,17 @@
-.title-section{
+.characters-background {
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: url('/charactersjpg.jpg'); /* Your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title-section{
     display: flex;
     justify-content: center;
     align-items: center;
