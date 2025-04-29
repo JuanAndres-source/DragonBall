@@ -1,1 +1,46 @@
-<p>planets works!</p>
+<!-- planets.component.html -->
+
+<section class="title-section">
+    <p class="title">Planets:</p>
+  </section>
+  
+  <section class="planets-list">  
+    @for (planet of planets; track planet) {
+      <article class="planet-card" (click)="openModal(planet)">
+        <p class="name">{{ planet.name }}</p>
+        <img class="image" [src]="planet.image" alt="{{ planet.name }}">
+      </article>
+    }
+  </section>
+  
+  <section class="pagination">
+    <button (click)="previousPage()">Previous</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="nextPage()">Next</button>
+  </section>
+  
+  @if (isModalOpen) {
+    <div class="modal">
+      <div class="modal-content" id="modal">
+        <span class="close" (click)="closeModal()">&times;</span>
+  
+        <h2>{{ selectedPlanet?.name }}</h2>
+        <img [src]="selectedPlanet?.image" alt="{{ selectedPlanet?.name }}">
+  
+        @if (selectedPlanet?.description) {
+          <p>{{ selectedPlanet.description }}</p>
+        }
+  
+        @if (selectedPlanet?.createdAt) {
+          <p>Created at: {{ selectedPlanet.createdAt }}</p>
+        }
+  
+        @if (selectedPlanet?.updatedAt) {
+          <p>Last update: {{ selectedPlanet.updatedAt }}</p>
+        }
+  
+        <button (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  }
+  
